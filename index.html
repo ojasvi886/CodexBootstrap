@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex- Coding for all</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- IMP line - below one -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand">Codex</span>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#" target="_self"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./premium.html" target="_blank"
+                >Premium</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#c1">Contact us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger mx-2"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              Signup
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+            <label for="inputPassword5" class="form-label">Password</label>
+            <input
+              type="password"
+              id="inputPassword5"
+              class="form-control"
+              aria-describedby="passwordHelpBlock"
+            />
+            <div id="passwordHelpBlock" class="form-text">
+              Your password must be 8-20 characters long, contain letters and
+              numbers, and must not contain spaces, special characters, or
+              emoji.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Login</button>
+          </div>
+          <p class="mx-3">New member?</p>
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#signupModal"
+          >
+            SignUp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Sign-Up</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-4">
+                <label for="validationCustom01" class="form-label"
+                  >First name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  placeholder="Ojasvi"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustom02" class="form-label"
+                  >Last name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom02"
+                  placeholder="Gupta"
+                  required
+                />
+                <div class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label"
+                  >Username</label
+                >
+                <div class="input-group has-validation">
+                  <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="validationCustomUsername"
+                    aria-describedby="inputGroupPrepend"
+                    required
+                  />
+                  <div class="invalid-feedback">Please choose a username.</div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label"
+                  >Country</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom03"
+                  placeholder="India"
+                  required
+                />
+                <div class="invalid-feedback">Please provide a valid city.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom03" class="form-label"
+                  >E-Mail</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="abc@gmail.com"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" type="submit">
+                  Submit form
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Sign-Up</button>
+          </div>
+          <p class="mx-3">Already a member?</p>
+          <button
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="1.jpg" height="400" class="d-block w-100" alt="Code" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Wanna learn Code..</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="2.jpg" height="400" class="d-block w-100" alt="Screen" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Follow us..</h3>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="3.jpg" height="400" class="d-block w-100" alt="Tech " />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Feel the tech</h3>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- my-4 gives a margin of 4 in y axis -->
+    <div class="container my-4">
+      <div class="container marketing">
+        <div class="row" style="padding-left: 6%">
+          <div class="col-lg-4">
+            <img
+              src="contest.jpg"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+              alt="conference"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+            <h2 class="fw-normal" style="padding-top: 5%">Coding Contest</h2>
+            <p style="padding-top: 3%; padding-bottom: 1.5%">
+              Welcome to DISCONNECTED ......The coding contest of Codex.
+            </p>
+            <p>
+              <a class="btn btn-secondary" onclick="clicks()">View details »</a>
+            </p>
+            <script>
+              function clicks() {
+                alert("Comming soon");
+              }
+            </script>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="course.jpg"
+              alt="Courses"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+            <h2 class="fw-normal" style="padding-top: 3%">Courses</h2>
+            <p style="padding-top: 5%; padding-bottom: 6.5%">
+              Explore the world of Codex Courses.
+            </p>
+            <p>
+              <a class="btn btn-secondary" onclick="clicke()">View details »</a>
+            </p>
+            <script>
+              function clicke() {
+                alert("To be launched soon");
+              }
+            </script>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="test.png"
+              alt="test"
+              class="bd-placeholder-img rounded-circle"
+              width="140"
+              height="140"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-color)"
+            ></rect>
+
+            <h2 class="fw-normal" style="padding-top: 5%">Codex Tests</h2>
+            <p style="padding-top: 1%; padding-bottom: 1.5%">
+              Assess yourself by taking our Codex practice assessment test.
+            </p>
+
+            <p>
+              <a class="btn btn-secondary" onclick="clicked()"
+                >View details »</a
+              >
+            </p>
+            <script>
+              function clicked() {
+                alert("Page under construction");
+              }
+            </script>
+          </div>
+        </div>
+        <hr class="featurette-divider" style="padding-top: 2%" />
+        <!-- class="img-fluid"  use it for reponsive images -->
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2
+              class="featurette-heading fw-normal lh-1"
+              style="padding-bottom: 5%"
+            >
+              Coding Platforms ... 5
+            </h2>
+            <p class="lead">
+              Some great platforms are : CodeChef Codeforces Leetcode etc..
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="plat.jpg"
+              alt="platform"
+              class="img-fluid"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2
+              class="featurette-heading fw-normal lh-1"
+              style="padding-bottom: 5%"
+            >
+              Conferences
+            </h2>
+            <p class="lead">Coding Conferences being held round the Globe.</p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img
+              src="conf.jpg"
+              alt="platform"
+              class="img-fluid"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+          </div>
+        </div>
+
+        <hr class="featurette-divider" />
+
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2
+              class="featurette-heading fw-normal lh-1"
+              style="padding-bottom: 5%"
+            >
+              Coding Contests round thwe world
+            </h2>
+            <p class="lead">Explore the Olympics of Coding ..ICPC..</p>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="icpc.png"
+              alt="platform"
+              class="img-fluid"
+              class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+              width="500"
+              height="500"
+            />
+            <rect
+              width="100%"
+              height="100%"
+              fill="var(--bs-secondary-bg)"
+            ></rect>
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+      </div>
+    </div>
+
+    <footer class="footer-comp" style="background-color: black">
+      <div class="container">
+        <div class="row footer-main">
+          <div class="col-lg-6 col-md-5 col-sm12">
+            <div class="tml-footer-nav">
+              <a
+                class="link-secondary text-decoration-none"
+                href="#"
+                target="_self"
+              >
+                <img
+                  src="codex.png"
+                  style="padding-top: 30px"
+                  alt="Codex"
+                  width="100px"
+              /></a>
+              <ul class="list-unstyled text-small">
+                <li class="footer-nav-link py-2">
+                  <a href="#" class="d-flex align-items-center" target="_self">
+                    <div style="color: aliceblue; padding-top: 6%">Codex</div>
+                    <span class="icon-Arrow-Right ms-2"></span
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm12 footer-list">
+            <div class="footer-nav">
+              <div
+                class="nav-link-heading nav-quicklinks mb-sm-2 pt-lg-1 pb-lg-2"
+              >
+                <p
+                  class="linkdropdown_label"
+                  id="quickid"
+                  style="color: aliceblue"
+                >
+                  Quick Links
+                </p>
+              </div>
+              <ul class="list-unstyled text-small">
+                <li class="footer-nav-link py-2 mb-lg-2">
+                  <a
+                    class="link-secondary text-decoration-none d-flex align-items-center"
+                    href="#"
+                    target="_self"
+                  >
+                    <span style="color: aliceblue">Home</span>
+                    <span class="icon-Arrow-Right ms-2"></span
+                  ></a>
+                </li>
+
+                <li class="footer-nav-link py-2 mb-lg-2">
+                  <a
+                    class="link-secondary text-decoration-none d-flex align-items-center"
+                    href="./premium.html"
+                    target="_blank"
+                  >
+                    <span style="color: aliceblue">Premium</span>
+                    <span class="icon-Arrow-Right ms-2"></span
+                  ></a>
+                </li>
+                <li class="footer-nav-link py-2 mb-lg-2">
+                  <a name="c1"></a>
+                  <span style="color: aliceblue"
+                    >Contact Details: br Ph.no: 7607370738 <br />Email:
+                    ojasvigupta12b1@gmail.com
+                  </span>
+
+                  <span class="icon-Arrow-Right ms-2"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm12 footer-list">
+            <div class="footer-nav">
+              <div class="nav-link-heading mb-sm-2 pt-lg-1 pb-lg-2">
+                <p
+                  class="linkdropdown_label"
+                  id="socialid"
+                  style="color: aliceblue"
+                >
+                  Social
+                </p>
+              </div>
+              <ul class="list-unstyled text-small">
+                <li class="social-nav-link py-2 mb-lg-2">
+                  <img
+                    src="fb.jpg"
+                    width="20px"
+                    alt="Facebook"
+                    class="social_media_icon"
+                  />
+                  <a
+                    class="link-secondary text-decoration-none"
+                    target="_blank"
+                    href="https://www.facebook.com"
+                  >
+                    <span style="color: aliceblue">Facebook</span>
+                  </a>
+                </li>
+
+                <li class="social-nav-link py-2 mb-lg-2">
+                  <img
+                    src="tw.jpg"
+                    width="20px"
+                    alt="Twitter"
+                    class="social_media_icon"
+                  />
+                  <a
+                    class="link-secondary text-decoration-none"
+                    target="_blank"
+                    href="https://twitter.com"
+                  >
+                    <span style="color: aliceblue">Twitter</span>
+                  </a>
+                </li>
+
+                <li class="social-nav-link py-2 mb-lg-2">
+                  <img
+                    src="ig.jpg "
+                    width="20px"
+                    alt="Instagram"
+                    class="social_media_icon"
+                  />
+                  <a
+                    class="link-secondary text-decoration-none"
+                    target="_blank"
+                    href="https://www.instagram.com"
+                  >
+                    <span style="color: aliceblue">Instagram</span>
+                  </a>
+                </li>
+
+                <li class="social-nav-link py-2 mb-lg-2">
+                  <img
+                    src="yt.jpg"
+                    width="20px"
+                    alt="Youtube"
+                    class="social_media_icon"
+                  />
+                  <a
+                    class="link-secondary text-decoration-none"
+                    target="_blank"
+                    href="https://www.youtube.com"
+                  >
+                    <span style="color: aliceblue">Youtube</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-main">
+          <div class="col-lg-4 col-md-4 col-sm12">
+            <div class="copyright-text">
+              <p class="copy_right" style="color: aliceblue">
+                Copyright © 2024 Codex Ltd. All Rights Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+  
